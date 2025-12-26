@@ -1,0 +1,45 @@
+<!-- 
+  Snippet from my contribution to the Volunteering Website project.
+  Authored by: Manh Duc Huy Le (Mike Le)
+  File: admin_profile.html (lines I contributed)
+  Description: Script integration, navigation behaviours, and admin profile UI elements.
+-->
+
+<!-- Linked scripts responsible for admin UI interactions -->
+<script src="/javascripts/floating_box.js" defer></script>
+<script src="/javascripts/sub_nav.js" defer></script>
+<script src="/javascripts/admin_profile.js" defer></script>
+<script src="/javascripts/login.js"></script>
+
+<!-- Admin navigation controls -->
+<a href="javascript:void(0);" onclick="logout()">Logout</a>
+
+<a href="javascript:void(0);" 
+   class="selected" 
+   onclick="active('admin_details'); get_admin_info()" 
+   title="admin_details">
+   Details
+</a>
+
+<a href="javascript:void(0);" 
+   class="not_selected" 
+   onclick="active('manage_users'); get_users()" 
+   title="manage_users">
+   Manage Users
+</a>
+
+<a href="javascript:void(0);" 
+   onclick="active('manage_organisations'); get_organisations()" 
+   title="manage_organisations">
+   Manage Organisation
+</a>
+
+<a href="javascript:void(0);" 
+   onclick="active('add_new_admins'); get_admin_board()" 
+   title="add_new_admins">
+   Admin Board
+</a>
+
+<!-- Admin phone number fields -->
+<input type="number" id="admin_phone" name="phone" required>
+<input type="number" id="new_phone" name="phone" required>
